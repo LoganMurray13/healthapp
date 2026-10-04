@@ -1,0 +1,32 @@
+[project]
+name = "healthapp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Logan", email = "zaze1325@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.142.2",
+    "httpx2>=2.13.1",
+    "pydantic>=2.13.5",
+    "tzdata>=2026.5",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+healthapp = "healthapp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.22,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "anyio>=4.15.1",
+    "import-linter>=2.15",
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
